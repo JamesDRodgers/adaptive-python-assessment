@@ -1,0 +1,2 @@
+{"id":1,"bloom":1,"difficulty":1,"question":"What is a variable?","answer":"A variable stores a value","misconceptions":[]}
+{"id":2,"bloom":1,"difficulty":2,"question":"What type does input() return?","answer":"string","misconceptions":[]}
