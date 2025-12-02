@@ -2,7 +2,12 @@ import os
 import json
 from openai import OpenAI
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# For deployment: Set OPENAI_API_KEY in your hosting platform's environment variables
+# Render: Dashboard → Environment → Add OPENAI_API_KEY
+# Railway: Variables tab → Add OPENAI_API_KEY
+# Fly.io: fly secrets set OPENAI_API_KEY=sk-...
+
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 def evaluate_answer(question, resp):
     """Evaluate a student's answer using OpenAI API with error handling."""
